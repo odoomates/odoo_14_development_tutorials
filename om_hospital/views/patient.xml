@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="patient_action" model="ir.actions.act_window">
+        <field name="name">Patients</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital.patient</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                create your first patient!
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="hospital_root"
+              name="Hospital"
+              sequence="10"/>
+
+    <menuitem id="hospital_patient_root"
+              name="Patients"
+              parent="hospital_root"
+              sequence="10"/>
+
+    <menuitem id="menu_contacts"
+              name="contacts"
+              action="contacts.action_contacts"
+              sequence="10"/>
+
+
+</odoo>
